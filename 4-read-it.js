@@ -1,10 +1,11 @@
 const { Readable } = require('stream');
-
 const stream = new Readable();
+const content = process.argv[2];
+const writeable = process.stdout;
 
 stream._read = () => {};
-stream.push(process.argv[2]);
-stream.pipe(process.stdout);
+stream.push(content);
+stream.pipe(writeable);
 
 // official solution
 // const { Readable } = require('stream');
