@@ -9,6 +9,7 @@ transform._transform = (chunk, encoding, next) => {
 
 process.stdin.pipe(transform).pipe(process.stdout);
 
+// 1.
 // const through = require('through2');
 // const stream = through(write, end);
 // function write(buffer, encoding, next) {
